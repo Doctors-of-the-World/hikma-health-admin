@@ -28,6 +28,9 @@ import {
   IconBuildingHospital,
   IconUsers,
   IconFileReport,
+  IconMedicineSyrup,
+  IconChartSankey,
+  IconChartInfographic,
 } from '@tabler/icons-react';
 import { useRouter } from 'next/router';
 import { LinksGroup } from './LinksGroup';
@@ -71,12 +74,20 @@ const navLinks = [
     initiallyOpened: true,
     links: [{ label: 'Appointments List', link: '/app/appointments/list' }],
   },
+  // Prescriptions
+  {
+    label: 'Prescriptions',
+    icon: IconMedicineSyrup,
+    initiallyOpened: true,
+    links: [{ label: 'Prescriptions List', link: '/app/prescriptions/list' }],
+  },
   { label: 'Forms', icon: IconForms, link: '/app/forms-list' },
   // { label: 'HERS', icon: IconHaze, link: '/app/hers' },
   { label: 'Activate App', icon: IconHaze, link: '/app/app-register-code' },
   // { label: 'Reports (Beta)', icon: IconFileReport, link: '/app/reports' },
   // { label: 'Settings', icon: IconAdjustments, link: '/app/settings' },
   { label: 'Raw Data / Export Events', icon: IconAdjustments, link: '/app/exports' },
+  // { label: 'Data Explorer', icon: IconChartInfographic, link: '/app/data-explorer' },
 ];
 
 const useStyles = createStyles((theme, _, u) => ({
