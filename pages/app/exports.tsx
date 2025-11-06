@@ -381,15 +381,16 @@ export default function ExportsPage() {
 
       {/**
        * This input can be activated to import new data
-       * Keep disabled until there is a clear plan on the implications of data importing
-       * <FileInput
-       *   label="Upload new data"
-       *   placeholder="Upload a JSON file"
-       *   accept="application/json"
-       *   disabled={isDownloading}
-       *   onChange={(file) => uploadData(file || null)}
-       * />
+       * Keep disabled until there is a clear plan on the implications of data importing - Disable when done using it.
        */}
+       <FileInput
+         label="Upload new data"
+          placeholder="Upload a JSON file"
+          accept="application/json"
+          disabled={isDownloading}
+          onChange={(file) => uploadData(file || null)}
+        />
+       
 
       <If show={eventResponse.length > 0}>
         <Button onClick={downloadEvents} className="primary">
